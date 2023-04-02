@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  font-size: 12px;
+}
+
+.content {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-wrapper {
+  width: 300px;
+  background-color: #fff;
+  padding: 1.25rem;
+  position: relative;
+  padding-top: 8rem;
+  border-radius: 1.25rem;
+}
+.content__title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.75rem;
+}
+
+@media screen and (min-width: 90em) {
+  .content-wrapper {
+    width: 61%;
+    display: flex;
+    padding: 0;
+    overflow: hidden;
+    align-items: center;
+  }
+  .content__title {
+    text-align: left;
+  }
+}
+.image {
+  width: 80%;
+  position: absolute;
+  padding-bottom: 3rem;
+  background: url(../images/bg-pattern-mobile.svg) no-repeat 0 110px;
+  background-size: contain;
+  left: 50%;
+  top: 2%;
+  transform: translate(-50%, -50%);
+}
+.image__mobile {
+  display: block;
+}
+
+@media screen and (min-width: 90em) {
+  .image {
+    width: auto;
+    min-height: 100%;
+    padding-block: 4.5rem;
+    position: static;
+    transform: none;
+    background: url(../images/bg-pattern-desktop.svg) no-repeat 100% 65%;
+    background-size: 150%;
+    transform: translateX(-18%);
+  }
+}
+.accordion__item {
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+.accordion .active .accordion__question {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.accordion .active .accordion__question p:hover {
+  color: hsl(238deg, 29%, 16%);
+}
+.accordion .active .accordion__answer {
+  max-height: 150px;
+  opacity: 1;
+}
+.accordion .active .accordion__icon {
+  transform: rotate(540deg);
+}
+.accordion__icon {
+  transition: 0.4s;
+}
+.accordion__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 0.25rem 0;
+}
+.accordion__question p {
+  color: hsl(237deg, 12%, 33%);
+  transition: 0.3s;
+}
+.accordion__question:hover p {
+  color: hsl(14deg, 88%, 65%);
+}
+.accordion__answer {
+  color: hsl(240deg, 6%, 50%);
+  max-height: 0;
+  opacity: 0;
+  transition: 0.3s;
+}
+.accordion hr {
+  color: hsl(240deg, 5%, 91%);
+  border-style: solid;
+  border-width: 0.25px;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 90em) {
+  .accordion {
+    width: 36%;
+  }
+}/*# sourceMappingURL=style.css.map */
