@@ -36,7 +36,6 @@ body {
     width: 61%;
     display: flex;
     padding: 0;
-    overflow: hidden;
     align-items: center;
   }
   .content__title {
@@ -56,17 +55,32 @@ body {
 .image__mobile {
   display: block;
 }
+.image-box {
+  display: none;
+}
 
 @media screen and (min-width: 90em) {
   .image {
     width: auto;
     min-height: 100%;
-    padding-block: 4.5rem;
     position: static;
     transform: none;
+    overflow: hidden;
+    padding-bottom: 0;
+    background: none;
+  }
+  .image-wrapper {
+    padding-block: 4.5rem;
     background: url(../images/bg-pattern-desktop.svg) no-repeat 100% 65%;
-    background-size: 150%;
-    transform: translateX(-18%);
+    background-size: 200%;
+    transform: translate(-18%);
+  }
+  .image-box {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -10.5%;
+    transform: translateY(-25%);
   }
 }
 .accordion__item {

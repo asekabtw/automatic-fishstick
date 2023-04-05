@@ -49,7 +49,6 @@ body {
       width: 61%;
       display: flex;
       padding: 0;
-      overflow: hidden;
       align-items: center;
     }
 
@@ -74,19 +73,37 @@ body {
   &__mobile {
     display: block;
   }
+
+  &-box {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 90em) {
   .image {
     width: auto;
     min-height: 100%;
-    padding-block: 4.5rem;
     position: static;
     transform: none;
-    background: url(../images/bg-pattern-desktop.svg) no-repeat 100% 65%;
+    overflow: hidden;
+    padding-bottom: 0;
+    background: none;
 
-    background-size: 150%;
-    transform: translateX(-18%);
+    &-wrapper {
+      padding-block: 4.5rem;
+      background: url(../images/bg-pattern-desktop.svg) no-repeat 100% 65%;
+      background-size: 200%;
+      transform: translate(-18%);
+    }
+
+    &-box {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: -10.5%;
+
+      transform: translateY(-25%);
+    }
   }
 }
 
